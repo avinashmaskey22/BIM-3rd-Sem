@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Count check box selected</title>
+</head>
+
+<body>
+    <form action="" name="frmCheckbox" method="POST" onsubmit="checkboxValidate()">
+
+        <h1>Count Check Box Selected: Music Genres</h1>
+        <p><input type="checkbox" name="check_btn" value=" heavy metal">Heavy Metal</p>
+        <p><input type="checkbox" name="check_btn" value="rock">Rock</p>
+        <p><input type="checkbox" name="check_btn" value="country">Country</p>
+        <p><input type="checkbox" name="check_btn" value="jazz">Jazz</p>
+        <p><input type="checkbox" name="check_btn" value="blues">Blues</p>
+
+        <p><input type="submit" value="Submit Your Fav Music"></p>
+
+    </form>
+
+    <script type="text/javascript">
+        function checkboxValidate() {
+            var intCount = 0;
+            var chb = document.frmCheckbox.check_btn;
+
+            for (var i = 0; i < chb.length; i++) {
+
+                if (chb[i].checked) {
+                    intCount++;
+                }
+            }
+            alert("You selected" + " " + intCount + " " + "checkbox(es)");
+        }
+
+    </script>
+
+</body>
+
+</html>

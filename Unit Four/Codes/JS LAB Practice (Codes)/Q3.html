@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Q3. Make a form with name, address, email and password, then validate
+           values for empty and correct values using JavaScript. (2019)
+    
+        Ans: Assuming following "Test Cases" for validations:
+
+             i. username, email, address and password should not be empty.
+             ii. username, email, address and password should not accept blank spaces.
+             iii. Both username and password should be "admin".
+             iv. email format should be in standard form like e.g., "abc@gmail.com.np".
+             v. address should strictly be "Nepal".
+    -->
+
+    <form action="profile.html" onsubmit="return validate()">
+        Username: <input type="text" id="uName"><br><br>
+        User Address: <input type="text" id="uAddress"><br><br>
+        Email Address: <input type="email" id="uEmail"><br><br>
+        Password: <input type="password" id="uPassword"><br><br>
+
+        <input type="submit">
+    </form>
+
+    <script type="text/javascript">
+        function validate() {
+            var userName = document.getElementById("uName").value;
+            var uAddress = document.getElementById("uAddress").value;
+            var uEmail = document.getElementById("uEmail").value;
+            var uPassword = document.getElementById("uPassword").value;
+
+            //email validation
+            var regularExp = /^([a-zA-Z0-9._-]+)@([a-zA-Z0-9-]+)\.([a-z]{2,20})\.([a-z]{2,20})$/;
+
+            //address validations
+            var regularAdd = /^Nepal$/;
+
+            if (userName.trim() == "" || uAddress.trim() == "" || uEmail.trim() == "" || uPassword.trim() == "") {
+                alert("Please enter the credentials.");
+                return false;
+            } else if (userName != "admin" || uPassword != "admin") {
+                alert("Username and password did not match.");
+                return false;
+            }
+            else if (!(regularExp.test(uEmail))) {
+                alert("Invalid email address.");
+                return false;
+            } else if (!(regularAdd.test(uAddress))) {
+                alert("Your address did not match.");
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

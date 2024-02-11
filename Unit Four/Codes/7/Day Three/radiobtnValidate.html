@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Radio Button Validation</title>
+</head>
+
+<body>
+
+    <h1>Radio Button Validation</h1>
+
+    <form action="" name="frmGender" method="POST" onsubmit=" return radioValidate()">
+        <p><input type="radio" name="radio_btn" value="male">Male</p>
+        <p><input type="radio" name="radio_btn" value="female">Female</p>
+        <p><input type="radio" name="radio_btn" value="others">Others</p>
+
+        <p><input type="submit" value="Submit Your Gender"></p>
+
+    </form>
+
+    <script type="text/javascript">
+        function radioValidate() {
+            var radioButtons = document.frmGender.radio_btn;
+
+            for (var i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked == true) {
+                    alert("Gender Selected");
+                    // alert(`${radioButtons[i].value} Selected`);
+                    return true;
+                }
+            }
+            alert("You didnot select your gender");
+            return false;
+        }
+
+    </script>
+
+</body>
+
+</html>

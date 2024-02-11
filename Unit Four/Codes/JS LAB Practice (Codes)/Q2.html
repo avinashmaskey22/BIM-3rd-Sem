@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+       Q2. Write a source code to create the login form that contains a textbox for username,
+        a textbox for password and a submit button. Make the following validations 
+        (both username and password are required and cannot be the same and length
+        should be greater than 5 characters long). (2018) 
+    -->
+
+    <form action="profile.html" method="post" onsubmit="return validate()">
+        Username: <input type="text" id="uName"><br><br>
+        Password: <input type="password" id="uPass"><br><br>
+
+        <input type="submit">
+    </form>
+    <script type="text/javascript">
+        function validate() {
+            var username = document.getElementById("uName").value;
+            var password = document.getElementById("uPass").value;
+
+            if (username.trim() == "" || password.trim() == "") {
+                alert("Please enter the credentials.");
+                return false;
+            } else if (username.length < 6 || password.length < 6) {
+                alert("Username and password should be greater than 5 characters.");
+                return false;
+            } else if (username == password) {
+                alert("Username and password cannot be same.");
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

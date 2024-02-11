@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Q4. Write a JavaScript Program, create an array of fruits with values apple, orange,
+           and mango. Then add three more items in front of array using JavaScript 
+           function and remove two items from back of array. Now display the items
+           of array in string format. (2020 makeup)
+     -->
+
+    <button onclick="addFruits()">Add Fruits</button>
+    <button onclick="removeFruits()">Remove Fruits</button>
+
+    <p id="output"></p>
+
+    <script type="text/javascript">
+
+        var fruits = ["apple", "orange", "mango"];
+        document.getElementById("output").innerHTML = fruits; //default print
+
+        function addFruits() {
+            //adding fruits infront of the array
+            fruits.splice(0, 0, "papaya", "cherry", "grapes");
+            var result = fruits.toString();
+
+            document.getElementById("output").innerHTML = result;
+        }
+
+        function removeFruits() {
+            //removing fruits from back of an array
+            fruits.splice(-2);
+            var result = fruits.toString();
+
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

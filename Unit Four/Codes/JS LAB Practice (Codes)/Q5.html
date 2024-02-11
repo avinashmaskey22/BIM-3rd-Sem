@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Array Table - Example</title>
+</head>
+
+<body>
+    <!-- 
+        Q5. Define array. Create a two-dimensional array storing five student’s data 
+        and display them in HTML table. (2022)
+     -->
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Semester</th>
+            <th>Address</th>
+            <th>Contact No.</th>
+        </tr>
+        <script type="text/javascript">
+            var arr = new Array(
+                Array("Dimaria", "Eight", "Argentina", 9999999999),
+                Array("Ronaldo", "Seven", "Portugal", 7777777777),
+                Array("Kante", "Six", "France", 8888888888),
+                Array("Messi", "Fifth", "Argentina", 6666666666),
+                Array("Ozil", "Fourth", "Germany", 5555555555)
+            );
+
+            for (var i = 0; i < arr.length; i++) {
+                document.write("<tr>");
+                for (var j = 0; j < arr[i].length; j++) {
+                    document.write("<td>" + arr[i][j] + "</td>");
+                }
+                document.write("</tr>");
+            }
+        </script>
+    </table>
+</body>
+
+</html>

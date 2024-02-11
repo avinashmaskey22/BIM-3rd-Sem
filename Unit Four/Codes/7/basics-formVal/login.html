@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="welcome.html" onsubmit="return validate()">
+        Username: <input type="text" id="uName" placeholder="username...."><br><br>
+        Password: <input type="password" id="uPass" placeholder="password...."><br><br>
+
+        <input type="submit" value="Log In">
+    </form>
+
+    <script type="text/javascript">
+        function validate() {
+            var username = document.getElementById("uName");
+            var password = document.getElementById("uPass");
+
+            if (username.value.trim() == "" || password.value.trim() == "") {
+                alert("Please enter your credentials.");
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

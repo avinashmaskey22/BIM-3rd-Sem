@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Replace Method</title>
+</head>
+
+<body>
+  <!--
+        The JavaScript replace() method often comes in handy with text inputs because it allows you to
+        replace certain characters with other characters. The simplest way to use the replace() method is to
+        use the following syntax:
+
+        string.replace( oldSubString , newSubString );
+
+        Example below:
+            replaces the value of the "bad" string to "good".
+            
+        Run the code and try it.
+    -->
+  <form name="myForm">
+    <textarea name="myTextArea" id="myTextArea" cols="40"
+      rows="10">I think it would be a bad idea to make a badge. </textarea>
+    <input type="button" value="Replace characters bad" onclick="document.myForm.myTextArea.value=document.myForm.myTextArea.value.replace('bad',
+      'good');">
+  </form>
+</body>
+
+</html>

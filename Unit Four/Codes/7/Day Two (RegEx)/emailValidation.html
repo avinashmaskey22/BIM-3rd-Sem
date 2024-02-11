@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Email Validation</h1>
+
+    <form action="#" method="POST" name="frmValidate">
+        <input type="email" name="uEmail" id="uEmail" placeholder="Enter Email Address"><br><br>
+        <button onclick="vaildate()" type="button">Submit</button>
+    </form>
+
+
+    <script type="text/javascript">
+
+        function vaildate() {
+
+            var txtEmail = document.getElementById("uEmail").value;
+
+            // abc@gmail.com
+            //abc@sdc.edu.np
+            //yourname@domain.extension(.extension) 
+            //alphabet, numbers, ._+- //alphabet, number, - // alphabet 
+
+            // var regx = /^a.b$/; //wild card entry
+
+            /* var regularExp = /^([a-z A-Z 0-9 ._-]+)@([a-z A-Z 0-9 -]+)\.([a-z]{2,20})$/; */
+
+            /* var regularExp = /^([a-z A-Z 0-9 ._-]+)@([a-z A-Z 0-9 -]+)\.([a-z]{2,20})\.?([a-z]{2,20})?$/; */
+
+            if (regularExp.test(txtEmail)) {
+                alert("Valid email address");
+            } else {
+                alert("Invalid email address");
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

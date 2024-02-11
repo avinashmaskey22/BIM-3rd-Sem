@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        splice():
+
+        The name of this function is very similar to slice(). 
+        This naming similarity often confuses developers. 
+        The splice() method changes an array, by adding or removing 
+        elements from it.
+        
+        Syntax:
+        array.splice(index, howmany, item1, item2, ......)
+
+        index: The position to add/remove items.
+                Negative value defines the position 
+                from the end of the array.
+
+        howmany: Optional.
+                 Number of items to be removed.
+
+        item: item1,....., itemx: Optional.
+              New elements(s) to be added.
+
+     -->
+
+    <script type="text/javascript">
+        let arr = new Array("hello", "World", 100, true, 42.5);
+
+        //adding elements
+        /* arr.splice(3, 0, false, 50);
+        document.write(arr); */
+
+        //removing elements
+        // arr.splice(2, 3);
+        // document.write(arr);
+
+        // arr.splice(0, 1, 'SDC');
+        // document.write(arr);
+
+    </script>
+</body>
+
+</html>

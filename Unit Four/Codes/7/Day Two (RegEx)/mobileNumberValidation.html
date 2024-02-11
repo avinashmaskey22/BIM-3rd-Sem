@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Mobile Number Validation</h1>
+  <form action="#" onsubmit="return validate()">
+    <input type="text" name="uNum" id="uNum" placeholder="Enter Mobile Number" />
+    <span id="success"></span>
+    <span id="error"></span>
+    <br><br>
+    <input type="submit" value="Submit" />
+  </form>
+
+  <script type="text/javascript">
+    function validate() {
+      var txt = document.getElementById("uNum").value;
+      var regx = /^\+977[0-9]{10}$/; //Nepali mobile number validation
+
+      if (regx.test(txt)) {
+        document.getElementById("success").innerHTML = "Valid Number";
+        document.getElementById("success").style.color = "green";
+        return false;
+      } else {
+        document.getElementById("error").innerHTML = "Invalid Number";
+        document.getElementById("error").style.color = "red";
+        return false;
+      }
+    }
+  </script>
+</body>
+
+</html>

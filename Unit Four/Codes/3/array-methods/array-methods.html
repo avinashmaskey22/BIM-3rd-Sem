@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var instruments = new Array("guitar", "drums", "piano", "tabala");
+    var artist = new Array("Dave Murray", "Nicko McBrain", "john lenon");
+
+    /* The Below Code Explains Array Methods */
+
+    //JS Method toString() converts an array to a string of (comma separated) array values.
+    // document.write(artist.toString());
+
+    /* The join() method returns an array as a string.The join() method does not change the original array.
+       Any separator can be specified.The default is comma(,). */
+    // document.write(artist.join(' $ '));
+
+    //Joins (or concatenates or merge) two or more array to create one new one.
+    // document.write(instruments.concat(artist));
+
+    /*
+    Popping and Pushing:
+        -> When you work with arrays, it is easy to remove elements and add new elements.
+        -> This is what popping and pushing is: Popping items out of an array, or pushing items into an array.
+    */
+
+    //pop() method removes the last element from an array and returns the value that was "popped out".
+    // document.write(instruments.pop());
+
+    //push() method adds a new element to an array (at the end). push() method returns the new array length.
+    // document.write(instruments.push('basuri'));
+    // document.write("<br>" + instruments);
+
+    /*
+      Shifting Elements:
+      -> Shifting is equivalent to popping, but working on the first element instead of the last.
+    */
+
+    //shift() method returns the value that was "shifted out".
+    // document.write(instruments.shift());
+    // document.write("<br>" + instruments);
+
+    //unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements.
+    // document.write(instruments.unshift('Sarangi'));
+    // document.write("<br>" + instruments);
+  </script>
+</body>
+
+</html>

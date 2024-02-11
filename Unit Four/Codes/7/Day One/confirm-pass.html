@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Confim Password check</title>
+</head>
+
+<body>
+  <h1>Confim Password check</h1>
+  <form action="profile.html" name="frmLogin" method="POST" onsubmit="return formPassValidate()">
+    Username:<input type="text" name="uName" size="12" /><br /><br />
+    Password:<input type="password" name="uPass_1" size="12" /><br /><br />
+    Repeat Password:<input type="password" name="uPass_2" size="12" /><br /><br />
+
+    <input type="submit" value="Log In" />
+  </form>
+
+  <script type="text/javascript">
+
+    function formPassValidate() {
+      var username = document.frmLogin.uName.value; //accessig value using dot notation
+      var password1 = document.frmLogin.uPass_1.value;
+      var password2 = document.frmLogin.uPass_2.value;
+
+      if (username.length < 6) {
+        alert("Username must be atleast six characters.");
+        return false;
+      } else if (password1 != password2) {
+        alert("Your password didnot match");
+        return false;
+      } else {
+        return true;
+      }
+    }
+  </script>
+</body>
+
+</html>

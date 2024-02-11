@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Space and blank check</title>
+</head>
+
+<body>
+  <h1>Space and blank check for user input field</h1>
+  <form action="profile.html" name="frmLogin" method="POST" onsubmit="return formValidate()">
+    Username: <input type="text" name="uName" /><br /><br />
+    Password: <input type="password" name="uPass" /><br /><br />
+
+    <input type="submit" value="Log In" />
+  </form>
+
+  <script type="text/javascript">
+    function formValidate() {
+      var username = document.frmLogin.uName.value;
+      var password = document.frmLogin.uPass.value;
+
+      if (username.trim() == "" || password.trim() == "") {
+        alert("Please Enter Your Credentials!");
+        return false;
+      } else if (username != "admin") {
+        alert("Username is incorrect!");
+        return false;
+      } else if (password.length < 6) {
+        alert("Password must be atleast six characters!");
+        return false;
+      } else {
+        return true;
+      }
+    }
+  </script>
+</body>
+
+</html>

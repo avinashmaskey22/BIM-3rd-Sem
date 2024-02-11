@@ -1,0 +1,32 @@
+<!-- 
+    Q1. Write a JS code to calculate the difference between two dates given by 
+    user. (2016)
+-->
+<form action="#" onsubmit="dateDiff()">
+    Date One: <input type="date" id="dateOne" placeholder="e.g., mm/dd/yy"><br><br>
+    Date Two: <input type="date" id="dateTwo" placeholder="e.g., mm/dd/yy"><br><br>
+
+    <input type="submit" value="Dates Difference">
+</form>
+<script>
+    function dateDiff() {
+        var date1 = new Date(document.getElementById("dateOne").value);
+        var date2 = new Date(document.getElementById("dateTwo").value);
+
+        var timeDiff = Math.abs(date1.getTime() - date2.getTime());
+        var diffInDays = timeDiff / (1000 * 3600 * 24);
+
+        var years = Math.floor(diffInDays / 365);
+        var remainingDays = diffInDays % 365;
+        var months = Math.floor(remainingDays / 30);
+        remainingDays %= 30;
+        var weeks = Math.floor(remainingDays / 7);
+        remainingDays %= 7;
+
+        alert("Difference between the two dates:\n"
+            + years + " year(s), "
+            + months + " month(s), "
+            + weeks + " week(s), and "
+            + remainingDays + " day(s).");
+    }
+</script>

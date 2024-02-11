@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <button type="button" onclick="openWindow()">Open Window</button>
+  <button type="button" onclick="focusWindow()">Focus Window</button>
+  <button type="button" onclick="blurWindow()">Blur</button>
+  <button type="button" onclick="closeWindow()">Close Window</button>
+
+  <script type="text/javascript">
+    var newWindow;
+
+    function openWindow() {
+      newWindow = window.open(
+        "../images/guitar.png",
+        "_blank",
+        "width=700,height=500,top=200,left=300"
+      );
+    }
+
+    function focusWindow() {
+      newWindow.focus();
+    }
+
+    function blurWindow() {
+      newWindow.blur();
+    }
+
+    function closeWindow() {
+      newWindow.close();
+    }
+  </script>
+</body>
+
+</html>

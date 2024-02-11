@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        slice():
+
+        The slice() method copies a given part of an array and returns 
+        that copied part as a new array. It doesn’t change the original 
+        array.
+
+        syntax:
+        array.slice(from, until);
+
+        from: Slice the array starting from an element index
+        until: Slice the array until another element index (i.e. it does not include last element)
+     -->
+
+    <script type="text/javascript">
+        let arr = new Array("hello", "World", 100, true, 42.5);
+
+        let newArr = arr.slice(2, 5);
+        document.write(newArr);
+    </script>
+</body>
+
+</html>

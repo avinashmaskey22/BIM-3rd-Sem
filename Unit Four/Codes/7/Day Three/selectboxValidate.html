@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SelectBox Validation</title>
+</head>
+
+<body>
+  <h1>SelectBox Validation</h1>
+  <form action="" name="frmCards" method="POST" onsubmit="return validate()">
+    <select name="selCards" id="selCards">
+      <option disabled selected>--Select of a suit of cards--</option>
+      <option value="hearts">Hearts</option>
+      <option value="diamonds">Diamonds</option>
+      <option value="spades">Spades</option>
+      <option value="clubs">Clubs</option>
+    </select>
+    <br /><br />
+    <input type="submit" value="Send Selection" />
+  </form>
+
+  <script type="text/javascript">
+    function validate() {
+      /* 
+      Some common select box properties that you might want to debug:
+      -> value: The currently selected value in the select box.
+      -> selectedIndex: The index of the currently selected option in the options list.
+      -> options: A collection of all the option elements within the select box.
+      -> length: The number of options in the select box.
+      */
+
+      //This code is for static select box
+      /* var selectedOption = document.frmCards.selCards.selectedIndex;
+
+      if (selectedOption == 0) {
+        alert("Please select a suit of cards.");
+        return false;
+      } else {
+        alert("Cards Selected");
+        return true;
+      } */
+
+      // This code is for dynamic select box
+      /* var selectedOption = document.frmCards.selCards;
+      alert(selectedOption.options[selectedOption.selectedIndex].value + " selected"); */
+
+    }
+  </script>
+</body>
+
+</html>
